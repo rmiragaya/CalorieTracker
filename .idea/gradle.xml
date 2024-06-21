@@ -9,14 +9,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/onboarding" />
-            <option value="$PROJECT_DIR$/onboarding/onboarding_domain" />
-            <option value="$PROJECT_DIR$/onboarding/onboarding_presentation" />
-            <option value="$PROJECT_DIR$/tracker" />
-            <option value="$PROJECT_DIR$/tracker/tracker_data" />
-            <option value="$PROJECT_DIR$/tracker/tracker_domain" />
-            <option value="$PROJECT_DIR$/tracker/tracker_presentation" />
+            <option value="$PROJECT_DIR$/mycore" />
+            <option value="$PROJECT_DIR$/myonboarding" />
+            <option value="$PROJECT_DIR$/myonboarding/myonboarding_domain" />
+            <option value="$PROJECT_DIR$/myonboarding/myonboarding_presentation" />
+            <option value="$PROJECT_DIR$/mytracker" />
+            <option value="$PROJECT_DIR$/mytracker/mytracker_data" />
+            <option value="$PROJECT_DIR$/mytracker/mytracker_domain" />
+            <option value="$PROJECT_DIR$/mytracker/mytracker_presentation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
