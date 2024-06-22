@@ -62,7 +62,6 @@ dependencies {
 
     implementation(DaggerHilt.hiltAndroid)
     kapt(DaggerHilt.hiltCompiler)
-    implementation(DaggerHilt.hiltNoSeQue)
 
     implementation(project(Modules.core))
     implementation(project(Modules.coreUi))
