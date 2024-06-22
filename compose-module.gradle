@@ -51,6 +51,7 @@ dependencies {
 
     kapt DaggerHilt.hiltCompiler
     implementation DaggerHilt.hiltAndroid
+    implementation DaggerHilt.hiltNoSeQue
 
     testImplementation Testing.junit4
     testImplementation Testing.junitAndroidExt
