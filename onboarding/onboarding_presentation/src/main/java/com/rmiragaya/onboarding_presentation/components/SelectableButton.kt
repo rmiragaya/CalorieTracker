@@ -45,7 +45,7 @@ fun SelectableButton(
     ) {
         Text(
             text = text,
-            style = textStyle.copy(color = if (isSelected) selectedTextColor else MaterialTheme.colors.onPrimary)
+            style = textStyle.copy(color = if (isSelected) selectedTextColor else MaterialTheme.colors.primaryVariant)
         )
     }
 
