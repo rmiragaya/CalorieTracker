@@ -1,4 +1,4 @@
-package com.rmiragaya.myonboarding
+package com.rmiragaya.onboarding_domain
 
 import org.junit.Test
 
