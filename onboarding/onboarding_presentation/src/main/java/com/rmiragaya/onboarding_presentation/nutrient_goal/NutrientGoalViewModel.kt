@@ -19,8 +19,8 @@ import javax.inject.Inject
 @HiltViewModel
 class NutrientGoalViewModel @Inject constructor(
     private val preferences: Preferences,
-    private val filterOutDigit: FilterOutDigit,
-    private val validateNutrients: ValidateNutrients
+    private val filterOutDigit: FilterOutDigit, // Filter is business logic
+    private val validateNutrients: ValidateNutrients // Validate is business logic
 ) : ViewModel() {
 
     var state by mutableStateOf(NutrientGoalState())

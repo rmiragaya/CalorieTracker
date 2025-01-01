@@ -3,6 +3,12 @@ package com.rmiragaya.onboarding_domain.use_case
 import com.rmiragaya.core.util.UiText
 import com.rmiragaya.core.R
 
+/**
+ * For Business logic we have to create Use Cases
+ * Use Cases belong in de Domain layer
+ * Use Cases are classes that contains one single expose function
+ * and that function only does one thing.
+ */
 class ValidateNutrients {
 
     operator fun invoke(

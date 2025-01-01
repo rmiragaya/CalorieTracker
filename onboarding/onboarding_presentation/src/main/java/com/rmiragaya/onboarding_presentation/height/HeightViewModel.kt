@@ -20,12 +20,13 @@ import javax.inject.Inject
 @HiltViewModel
 class HeightViewModel @Inject constructor(
     private val preferences: Preferences,
-    private val filterOutDigit: FilterOutDigit
+    private val filterOutDigit: FilterOutDigit // Filter is business logic
 ) : ViewModel() {
 
     var height by mutableStateOf("180")
         private set
 
+    // Channel to send UI events from ViewModel to the UI layer.
     private val _uiEvent = Channel<UiEvent>()
     val uiEvent = _uiEvent.receiveAsFlow()
 

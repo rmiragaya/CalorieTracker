@@ -20,7 +20,7 @@ import javax.inject.Inject
 @HiltViewModel
 class AgeViewModel @Inject constructor(
     private val preferences: Preferences,
-    private val filterOutDigit: FilterOutDigit
+    private val filterOutDigit: FilterOutDigit // Filter is business logic
 ) : ViewModel() {
 
     var age by mutableStateOf("20")
