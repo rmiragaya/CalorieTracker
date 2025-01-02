@@ -14,4 +14,6 @@
 .cxx
 local.properties
 .idea/vcs.xml
+.idea/deploymentTargetSelector.xml
+.idea/inspectionProfiles
 /.idea/runConfigurations.xml
