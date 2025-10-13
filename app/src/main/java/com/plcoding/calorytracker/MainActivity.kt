@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -16,6 +17,7 @@ import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import com.rmiragaya.core.navigation.Route
 import com.rmiragaya.onboarding_presentation.activity.ActivityScreen
 import com.rmiragaya.onboarding_presentation.age.AgeScreen
+import com.rmiragaya.onboarding_presentation.age.AgeViewModel
 import com.rmiragaya.onboarding_presentation.gender.GenderScreen
 import com.rmiragaya.onboarding_presentation.goal.GoalScreen
 import com.rmiragaya.onboarding_presentation.height.HeightScreen
@@ -50,6 +52,7 @@ class MainActivity : ComponentActivity() {
                         composable(Route.AGE) {
                             AgeScreen(
                                 scaffoldState = scaffoldState,
+                                viewModel = hiltViewModel<AgeViewModel>(),
                                 onNavigate = navController::navigate
                             )
                         }
@@ -88,7 +91,6 @@ class MainActivity : ComponentActivity() {
 
                         }
                     }
-
                 }
             }
         }

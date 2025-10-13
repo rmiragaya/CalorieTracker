@@ -42,6 +42,5 @@ fun WelcomeScreen(
             onClick = { onNavigate(UiEvent.Navigate(Route.GENDER)) },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
-
     }
 }
