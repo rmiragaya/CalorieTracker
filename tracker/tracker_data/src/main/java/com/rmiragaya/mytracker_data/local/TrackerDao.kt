@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.rmiragaya.mytracker_data.local.entity.TrackedFoodEntity
+import com.rmiragaya.mytracker_data.model.TrackedFood
 import kotlinx.coroutines.flow.Flow
 
 @Dao

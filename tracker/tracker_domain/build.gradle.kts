@@ -12,4 +12,5 @@ android{
 dependencies {
     // can import dependencies for just this module
     implementation(project(Modules.core))
+    implementation(Coroutines.coroutines)
 }
