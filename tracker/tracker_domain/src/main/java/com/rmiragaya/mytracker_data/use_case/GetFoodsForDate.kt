@@ -10,7 +10,7 @@ class GetFoodsForDate(
     private val repository: TrackerRepository
 ) {
 
-    suspend operator fun invoke(
+    operator fun invoke(
         date: LocalDate
     ): Flow<List<TrackedFood>> {
         return repository.getFoodsForDate(date)

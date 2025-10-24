@@ -18,7 +18,7 @@ import com.rmiragaya.core.domain.preferences.Preferences.Companion.KEY_WEIGHT
 
 class DefaultPreferences(
     private val sharedPref: SharedPreferences
-): Preferences {
+) : Preferences {
     override fun saveGender(gender: Gender) {
         sharedPref.edit()
             .putString(KEY_GENDER, gender.name)
@@ -97,4 +97,11 @@ class DefaultPreferences(
         )
     }
 
+    override fun saveShouldShowOnboarding(shouldShow: Boolean) {
+        sharedPref.edit().putBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, shouldShow).apply()
+    }
+
+    override fun loadShouldShowOnboarding(): Boolean {
+        return sharedPref.getBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, true)
+    }
 }
