@@ -21,8 +21,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.rmiragaya.core.R
-import com.rmiragaya.core.domain.model.ActivityLevel
-import com.rmiragaya.core.domain.model.Gender
 import com.rmiragaya.core.domain.model.GoalType
 import com.rmiragaya.core.util.UiEvent
 import com.rmiragaya.core_ui.LocalSpacing
@@ -63,11 +61,11 @@ fun GoalScreen(
             Row{
                 SelectableButton(
                     text = stringResource(id = R.string.lose),
-                    isSelected = viewModel.selectedGoal is GoalType.LoseWeigth,
+                    isSelected = viewModel.selectedGoal is GoalType.LoseWeight,
                     color = MaterialTheme.colors.primaryVariant,
                     selectedTextColor = Color.White,
                     onClick = {
-                        viewModel.onGoalTypeSelected(GoalType.LoseWeigth)
+                        viewModel.onGoalTypeSelected(GoalType.LoseWeight)
                     },
                     textStyle = MaterialTheme.typography.button.copy(
                         fontWeight = FontWeight.Normal
