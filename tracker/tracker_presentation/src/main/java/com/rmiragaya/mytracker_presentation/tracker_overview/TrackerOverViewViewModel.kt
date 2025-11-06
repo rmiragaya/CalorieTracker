@@ -77,14 +77,12 @@ class TrackerOverViewViewModel @Inject constructor(
                 }
             }
 
-            is TrackerOverViewEvent.OnToggleMEalClick -> {
+            is TrackerOverViewEvent.OnToggleMealClick -> {
                 state = state.copy(
                     meals = state.meals.map {
                         if (it.name == event.meal.name) {
                             it.copy(isExpanded = !it.isExpanded)
-                        } else {
-                            it
-                        }
+                        } else it
                     }
                 )
             }
