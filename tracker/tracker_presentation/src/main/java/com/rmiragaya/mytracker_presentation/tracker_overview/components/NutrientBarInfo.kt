@@ -30,6 +30,7 @@ fun NutrientBarInfo(
     goal: Int,
     name: String,
     color: Color,
+    modifier: Modifier,
     strokeWidth: Dp = 8.dp
 ) {
     val background = MaterialTheme.colors.background
@@ -43,12 +44,14 @@ fun NutrientBarInfo(
             targetValue = if (goal >0) {
                 value / goal.toFloat()
             } else 0f,
-            animationSpec = tween()
+            animationSpec = tween(
+                durationMillis = 300
+            )
         )
     }
 
     Box(
-        modifier = Modifier,
+        modifier = modifier,
         contentAlignment = Alignment.Center
     ){
         Canvas(

@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import com.plcoding.calorytracker.navigation.navigate
 import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import com.rmiragaya.core.navigation.Route
+import com.rmiragaya.mytracker_presentation.tracker_overview.TrackerOverviewScreen
 import com.rmiragaya.onboarding_presentation.activity.ActivityScreen
 import com.rmiragaya.onboarding_presentation.age.AgeScreen
 import com.rmiragaya.onboarding_presentation.age.AgeViewModel
@@ -85,7 +86,9 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.TRACKER_OVERVIEW) {
-
+                            TrackerOverviewScreen(
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.SEARCH) {
 
