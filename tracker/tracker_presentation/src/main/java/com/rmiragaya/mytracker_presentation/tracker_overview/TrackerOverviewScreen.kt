@@ -1,6 +1,9 @@
 package com.rmiragaya.mytracker_presentation.tracker_overview
 
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
@@ -9,12 +12,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.rmiragaya.core.util.UiEvent
 import com.rmiragaya.core_ui.LocalSpacing
+import com.rmiragaya.mytracker_presentation.tracker_overview.components.DaySelector
 import com.rmiragaya.mytracker_presentation.tracker_overview.components.NutrientsHeader
 
 @Composable
 fun TrackerOverviewScreen(
-    onNavigate: (UiEvent.Navigate) -> Unit,
-    viewModel: TrackerOverViewViewModel = hiltViewModel()
+    onNavigate: (UiEvent.Navigate) -> Unit, viewModel: TrackerOverViewViewModel = hiltViewModel()
 ) {
     val spacing = LocalSpacing.current
     val state = viewModel.state
@@ -22,10 +25,22 @@ fun TrackerOverviewScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(bottom =spacing.spaceMedium)
+            .padding(bottom = spacing.spaceMedium)
     ) {
         item {
             NutrientsHeader(state = state)
+            DaySelector(
+                date = state.date, onPreviousDayClick = {
+                    viewModel.onEvent(TrackerOverViewEvent.OnPreviousDayClick)
+                },
+                onNextDayClick = {
+                    viewModel.onEvent(TrackerOverViewEvent.OnNextDayClick)
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = spacing.spaceMedium)
+            )
+            Spacer(modifier = Modifier.height(spacing.spaceMedium))
         }
     }
 }
